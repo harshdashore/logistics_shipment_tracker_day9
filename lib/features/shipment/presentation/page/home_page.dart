@@ -4,7 +4,6 @@ import 'package:logistics_shipment_tracker_day9/features/shipment/presentation/c
 import 'details_page.dart';
 
 class HomePage extends StatelessWidget {
-
   final controller =
   Get.find<ShipmentController>();
 
@@ -12,13 +11,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-
       appBar: AppBar(
         title: const Text("Shipments"),
       ),
 
       body: Obx(() {
-
         if (controller.loading.value) {
           return const Center(
             child:
@@ -27,15 +24,11 @@ class HomePage extends StatelessWidget {
         }
 
         return ListView.builder(
-
           itemCount:
           controller.shipments.length,
-
           itemBuilder: (context, index) {
-
             final shipment =
             controller.shipments[index];
-
             return Card(
 
               child: ListTile(
@@ -53,9 +46,7 @@ class HomePage extends StatelessWidget {
                       shipment,
                     ),
                   );
-
                 },
-
               ),
             );
           },

@@ -6,11 +6,8 @@ import 'core/dependency/injection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await GetStorage.init();
-
   Injection.init();
-
   runApp(MyApp());
 }
 

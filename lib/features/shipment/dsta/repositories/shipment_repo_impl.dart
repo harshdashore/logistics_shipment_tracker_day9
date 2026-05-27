@@ -5,13 +5,10 @@ import 'package:logistics_shipment_tracker_day9/features/shipment/dsta/models/sh
 
 class ShipmentRepoImpl implements ShipmentRepository {
   final ShipmentRemoteDS remoteDS;
-
   ShipmentRepoImpl(this.remoteDS);
-
   @override
   Future<List<ShipmentEntity>> getShipment() async {
     final response = await remoteDS.getShipment();
-
     return response
         .map<ShipmentModel>((e) => ShipmentModel.fromJson(e))
         .toList();

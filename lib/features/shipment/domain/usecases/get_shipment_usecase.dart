@@ -2,9 +2,7 @@ import 'package:logistics_shipment_tracker_day9/features/shipment/domain/reposit
 
 class GetShipmentUseCase {
   final ShipmentRepository repository;
-
   GetShipmentUseCase(this.repository);
-
   execute() {
     return repository.getShipment();
   }

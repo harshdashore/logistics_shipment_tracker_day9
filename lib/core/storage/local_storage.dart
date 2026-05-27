@@ -6,7 +6,6 @@ class LocalStorage {
   static saveToken(token) {
     box.write("token", token);
   }
-
   static getToken() {
     return box.read("token");
   }

@@ -11,13 +11,11 @@ class Injection {
 
     /// Global controller
     Get.put(AuthController());
-
     /// Data source
     Get.lazyPut<ShipmentRemoteDS>(
           () => ShipmentRemoteDS(),
       fenix: true,
     );
-
     /// Repository registration
     Get.lazyPut<ShipmentRepository>(
           () => ShipmentRepoImpl(
@@ -25,7 +23,6 @@ class Injection {
       ),
       fenix: true,
     );
-
     /// UseCase
     Get.lazyPut<GetShipmentUseCase>(
           () => GetShipmentUseCase(
@@ -33,7 +30,6 @@ class Injection {
       ),
       fenix: true,
     );
-
     /// Controller
     Get.put(
       ShipmentController(

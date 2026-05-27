@@ -10,18 +10,14 @@ class ShipmentController extends GetxController {
   RxBool loading = false.obs;
 
   RxList<ShipmentEntity> shipments = <ShipmentEntity>[].obs;
-
   @override
   void onInit() {
     super.onInit();
     getShipment();
   }
-
   Future<void> getShipment() async {
     loading(true);
-
     shipments.value = await useCase.execute();
-
     loading(false);
   }
 }
